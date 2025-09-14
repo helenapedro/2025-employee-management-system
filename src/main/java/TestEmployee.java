@@ -2,13 +2,14 @@ package src.main.java;
 
 import src.main.java.data.EmployeeData;
 import src.main.java.model.Employee;
+import src.main.java.services.NameComparator;
 
 import java.util.Arrays;
 
 public class TestEmployee {
     public static void main(String[] args) {
         Employee[] data = EmployeeData.getEmployeeData();
-
+        Arrays.sort(data, new NameComparator());
         System.out.println(Arrays.toString(findSalaryList(data, 8000)));
     }
 

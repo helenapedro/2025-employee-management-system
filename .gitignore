@@ -1,3 +1,8 @@
+#Intellij
+.idea
+pom.xml
+src/ds
+
 # Compiled class file
 *.class
 

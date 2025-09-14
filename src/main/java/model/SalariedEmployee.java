@@ -1,4 +1,4 @@
-package W1L5_HW_Asgmt.prob3;
+package src.main.java.model;
 
 public class SalariedEmployee extends Employee{
     private double weeklySalary;

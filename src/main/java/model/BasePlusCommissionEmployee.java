@@ -1,4 +1,4 @@
-package src.main.java;
+package src.main.java.model;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee {
     private double baseSalary;

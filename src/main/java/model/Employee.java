@@ -1,4 +1,4 @@
-package src.main.java.model;
+package model;
 
 abstract public class Employee {
     private String firstName;
@@ -45,15 +45,15 @@ abstract public class Employee {
                 ", SSN = " + socialSecurityNumber;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o instanceof Employee e) {
-            return this.firstName.equals(e.firstName)
-                    && this.lastName.equals(e.lastName)
-                    && this.socialSecurityNumber.equals(e.socialSecurityNumber)
-                    && this.getPayment() == e.getPayment();
-        }
-        return false;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (o instanceof Employee e) {
+//            return this.firstName.equals(e.firstName)
+//                    && this.lastName.equals(e.lastName)
+//                    && this.socialSecurityNumber.equals(e.socialSecurityNumber)
+//                    && this.getPayment() == e.getPayment();
+//        }
+//        return false;
+//    }
 
 }

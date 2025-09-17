@@ -1,4 +1,4 @@
-package src.main.java.model;
+package model;
 
 public class SalariedEmployee extends Employee{
     private double weeklySalary;

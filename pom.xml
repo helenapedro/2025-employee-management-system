@@ -8,5 +8,24 @@
     <artifactId>2025-employee-management-system</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- Compile against Java 8 APIs/bytecode even on JDK 24 -->
+        <maven.compiler.release>8</maven.compiler.release>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <!-- Use release; do NOT set source/target at the same time -->
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

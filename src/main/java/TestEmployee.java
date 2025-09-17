@@ -1,32 +1,30 @@
-package src.main.java;
+import data.*;
+import model.*;
+import services.*;
 
-import src.main.java.data.EmployeeData;
-import src.main.java.model.Employee;
-import src.main.java.services.NameComparator;
-
-import java.util.Arrays;
+import java.util.*;
 
 public class TestEmployee {
     public static void main(String[] args) {
-        Employee[] data = EmployeeData.getEmployeeData();
-        Arrays.sort(data, new NameComparator());
-        System.out.println(Arrays.toString(findSalaryList(data, 8000)));
+        List<Employee> data = EmployeeData.getEmployeeData();
+
+        //data.sort(Comparator.comparingDouble(Employee::getPayment));
+        System.out.println(findSalaryList(data, 8000));
     }
 
-    public static Employee[] findSalaryList (Employee[] empArray, double salary) {
+    public static List<Employee> findSalaryList (List<Employee> empArray, double salary) {
         // Return an array of Employees whose getPayment() < salary.
         if (empArray == null) {
             throw new IllegalArgumentException("The array should not be empty");
         }
 
-        int count = 0;
-        Employee[] temp = new Employee[empArray.length];
+        List<Employee> temp = new ArrayList<Employee>();
 
         for (Employee e : empArray) {
             if (e != null && e.getPayment() < salary) {
-                temp[count++] = e;
+                temp.add(e);
             }
         }
-        return Arrays.copyOf(temp, count);
+        return temp;
     }
 }
